@@ -13,17 +13,17 @@ func InitRouter(app *iris.Application) {
 	/* if you need to verify accees just focus on the func  "GetSession" (.\http_helper\session.go) */
 	/* you can use the func like */
 	/*
-		  sess := http_helper.GetSession(ctx)
+		  	sess := http_helper.GetSession(ctx)
 			if sess == nil {
 				return
 			}
 	*/
 	/* and get or delete or save data from the session */
 	/*
-			  sess.Get("something")
-				sess.Delete("something")
+			sess.Get("something")
+			sess.Delete("something")
 		    if err := sess.Save(); err != nil {
-			    log.Println(err)
+				log.Println(err)
 		    }
 	*/
 	app.PartyFunc("/oauth2", func(u iris.Party) {
